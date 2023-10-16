@@ -66,7 +66,7 @@ suspend fun newUniqueRandomGrid(
 }
 
 fun newRandomGrid(gridAttributes: GridAttributes, random: Random = Random): List<CellShade> {
-    val difficulty = gridAttributes.difficulty ?: 10
+    val difficulty = gridAttributes.difficulty ?: 15
     return List(gridAttributes.width * gridAttributes.height) {
         if (random.nextInt(0, 100) > 4 * difficulty + 16) CellShade.SHADE
         else CellShade.EMPTY
